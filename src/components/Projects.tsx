@@ -10,12 +10,12 @@ const Projects: React.FC = () => {
   const projects = [
     {
       id: 1,
-      title: 'Vital – Smart Healthcare & Patient Portal',
-      description: 'A comprehensive healthcare management system built with React.js and Spring Boot',
+      title: 'Vital',
+      description: 'Vital is a comprehensive hospital communication system built with React.js and Spring Boot, offering real-time messaging, secure authentication, and role-based coordination between doctors, nurses, and departments.',
       longDescription: 'Created a complete doctor-patient portal using React.js, Spring Boot & MySQL. Features include appointment booking, medical record management, secure role-based dashboards with JWT authentication, and API endpoints for appointments and health history access.',
-      image: 'https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/ChatGPT Image Jul 12, 2025, 11_43_27 PM.png',
       technologies: ['React.js', 'Spring Boot', 'MySQL', 'JWT', 'REST API'],
-      github: 'https://github.com/vedbora/Vital-Smart-Healthcare-Patient-Portal',
+      github: 'https://github.com/vedbora/Vital',
       demo: '#',
       category: 'Healthcare',
       features: [
@@ -28,12 +28,12 @@ const Projects: React.FC = () => {
     },
     {
       id: 2,
-      title: 'UniGuide – Online Learning Platform',
-      description: 'A MERN-based learning management system with instructor and student roles',
+      title: 'UniGuide',
+      description: 'UniGuide is a smart student career planner built with React.js and Node.js, offering personalized roadmaps, skill tracking, and real-time progress insights to help students achieve their career goals efficiently.',
       longDescription: 'Developed comprehensive MERN-based learning system with instructor and student roles. Implemented course creation, enrollment, and progress tracking features. Secured user access using JWT & MongoDB for course content with responsive UI using React.js and Tailwind CSS.',
-      image: 'https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/ChatGPT Image Jul 12, 2025, 01_01_26 AM.png',
       technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS'],
-      github: 'https://github.com/vedbora/UniGuide-Online-Learning-Course-Marketplace',
+      github: 'https://github.com/vedbora/UniGuide',
       demo: '#',
       category: 'Education',
       features: [
@@ -43,43 +43,7 @@ const Projects: React.FC = () => {
         'Interactive learning modules',
         'Instructor dashboard'
       ]
-    },
-    {
-      id: 3,
-      title: 'Oops I Bought It – E-Commerce Platform',
-      description: 'Full-featured e-commerce platform with cart, checkout, and admin dashboard',
-      longDescription: 'Built complete e-commerce platform using React, Node.js, Express & MongoDB. Developed cart, checkout, and order tracking systems. Created admin dashboard for product and inventory management with JWT login and responsive UI using Tailwind.',
-      image: 'https://images.pexels.com/photos/3769747/pexels-photo-3769747.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Payment Gateway'],
-      github: 'https://github.com/vedbora/Oops-I-Bought-It-Modern-E-Commerce-Platform',
-      demo: '#',
-      category: 'E-Commerce',
-      features: [
-        'Shopping cart functionality',
-        'Payment integration',
-        'Order tracking',
-        'Admin dashboard',
-        'Inventory management'
-      ]
-    },
-    {
-      id: 4,
-      title: 'TalentHive – Job Portal',
-      description: 'Job and internship management system with recruiter and student dashboards',
-      longDescription: 'Built full-stack job portal using React.js, Spring Boot & MySQL with JWT auth. Enabled student & recruiter dashboards with job posting and application tracking. Designed REST APIs and role-based access system with clean, responsive UI using Tailwind CSS.',
-      image: 'https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React.js', 'Spring Boot', 'MySQL', 'JWT', 'REST API'],
-      github: 'https://github.com/vedbora/TalentHive-Job-Internship-Management-System',
-      demo: '#',
-      category: 'Job Portal',
-      features: [
-        'Job posting & management',
-        'Application tracking',
-        'Recruiter dashboard',
-        'Student profiles',
-        'Search & filtering'
-      ]
-    },
+    }
   ];
 
   const containerVariants = {
@@ -105,7 +69,7 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-gray-800 to-gray-900" />
-      
+
       <div className="container mx-auto px-6 relative z-10" ref={ref}>
         <motion.div
           variants={containerVariants}
@@ -123,14 +87,13 @@ const Projects: React.FC = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <motion.div
                 key={project.id}
                 variants={itemVariants}
                 className="group relative bg-gray-900/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-primary-500/50 transition-all duration-500"
                 whileHover={{ scale: 1.02, y: -10 }}
               >
-                {/* Project Image */}
                 <div className="relative h-64 overflow-hidden">
                   <img 
                     src={project.image} 
@@ -138,15 +101,11 @@ const Projects: React.FC = () => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
-                  
-                  {/* Category Badge */}
                   <div className="absolute top-4 left-4">
                     <span className="px-3 py-1 bg-primary-500/20 backdrop-blur-sm border border-primary-500/30 rounded-full text-primary-400 text-sm font-medium">
                       {project.category}
                     </span>
                   </div>
-
-                  {/* Quick Actions */}
                   <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <motion.a
                       href={project.github}
@@ -168,17 +127,13 @@ const Projects: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Project Content */}
                 <div className="p-6 space-y-4">
                   <h3 className="text-xl font-bold text-white group-hover:text-primary-400 transition-colors">
                     {project.title}
                   </h3>
-                  
                   <p className="text-gray-300 text-sm leading-relaxed">
                     {project.description}
                   </p>
-
-                  {/* Technologies */}
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech) => (
                       <span
@@ -189,8 +144,6 @@ const Projects: React.FC = () => {
                       </span>
                     ))}
                   </div>
-
-                  {/* View Details Button */}
                   <motion.button
                     onClick={() => setSelectedProject(project.id)}
                     className="w-full py-3 bg-gradient-to-r from-primary-500/20 to-secondary-500/20 border border-primary-500/30 rounded-lg text-primary-400 font-medium hover:from-primary-500/30 hover:to-secondary-500/30 transition-all duration-300"
@@ -206,7 +159,6 @@ const Projects: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Project Detail Modal */}
       <AnimatePresence>
         {selectedProject && (
           <motion.div
@@ -216,7 +168,6 @@ const Projects: React.FC = () => {
             exit={{ opacity: 0 }}
           >
             <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={() => setSelectedProject(null)} />
-            
             <motion.div
               className="relative bg-gray-800 rounded-2xl border border-gray-600 max-w-2xl w-full max-h-[90vh] overflow-y-auto"
               initial={{ scale: 0.8, opacity: 0 }}

@@ -24,8 +24,7 @@ const Skills: React.FC = () => {
         { name: 'Java (Spring Boot)', level: 90, color: 'from-red-600 to-orange-600' },
         { name: 'Node.js', level: 85, color: 'from-green-500 to-green-700' },
         { name: 'Express.js', level: 80, color: 'from-gray-700 to-gray-900' },
-        { name: 'REST APIs', level: 90, color: 'from-purple-500 to-purple-700' },
-        { name: 'Microservices', level: 75, color: 'from-indigo-500 to-indigo-700' },
+       
       ],
     },
     {
@@ -33,10 +32,9 @@ const Skills: React.FC = () => {
       icon: '🛠️',
       skills: [
         { name: 'MySQL', level: 85, color: 'from-blue-600 to-blue-800' },
-        { name: 'PostgreSQL', level: 80, color: 'from-blue-700 to-indigo-700' },
         { name: 'MongoDB', level: 85, color: 'from-green-600 to-green-800' },
         { name: 'Git/GitHub', level: 90, color: 'from-gray-700 to-black' },
-        { name: 'Docker', level: 70, color: 'from-blue-500 to-blue-700' },
+        
       ],
     },
     {
@@ -161,7 +159,7 @@ const Skills: React.FC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 'Programming using Java',
-                'Python Foundation',
+                'Introduction to GenAI Studio ',
                 'Basics of Python',
                 'Programming in C',
               ].map((cert, index) => (
@@ -177,7 +175,8 @@ const Skills: React.FC = () => {
                     <span className="text-2xl font-bold text-white">📜</span>
                   </div>
                   <h4 className="font-semibold text-white mb-2">{cert}</h4>
-                  <p className="text-sm text-gray-400">Infosys Springboard</p>
+                  <p className="text-sm text-gray-400"></p>
+                  
                 </motion.div>
               ))}
             </div>

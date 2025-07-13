@@ -109,15 +109,15 @@ const About: React.FC = () => {
                 </h3>
                 
                 <p className="text-gray-300 leading-relaxed">
-                  I'm a passionate Computer Engineering student at Walchand Institute of Technology 
+                  I'm a passionate Information Technology student at Walchand Institute of Technology 
                   with hands-on experience in full-stack web development. I specialize in creating 
                   innovative solutions using modern technologies like Java, Spring Boot, React.js, and Node.js.
                 </p>
                 
                 <p className="text-gray-300 leading-relaxed">
                   With a strong foundation in both frontend and backend development, I've built 
-                  several real-world projects including healthcare portals, e-learning platforms, 
-                  and e-commerce applications. I'm always eager to learn new technologies and 
+                  several real-world projects including healthcare portals And e-learning platforms, 
+                  and I'm always eager to learn new technologies and 
                   contribute to impactful Java-based solutions.
                 </p>
               </div>
